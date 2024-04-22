@@ -29,7 +29,7 @@ const FaceRecognition = ({userId, setEntries}) => {
 
     const onSubmit = () => {
         setUrl(value);
-        fetch('http://localhost:3000/imageurl', {
+        fetch('https://aiapp-api-ffd161fcfa13.herokuapp.com/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({imageUrl: value })
@@ -37,7 +37,7 @@ const FaceRecognition = ({userId, setEntries}) => {
           .then(response => response.json())
           .then(response => {
             if (response) {
-              fetch('http://localhost:3000/image', {
+              fetch('https://aiapp-api-ffd161fcfa13.herokuapp.com/image', {
                 method: 'put',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

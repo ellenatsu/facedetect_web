@@ -20,7 +20,7 @@ const Register = ({ loadUser, onRouteChange }) => {
       }
     
       const onSubmitRegister = () => {
-        fetch('http://localhost:3000/register', {
+        fetch('https://aiapp-api-ffd161fcfa13.herokuapp.com/register', {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -39,8 +39,8 @@ const Register = ({ loadUser, onRouteChange }) => {
       }
     
     return (
-        <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
-            <main className="pa4 black-80">
+        <article className="br3 ba b--black-10 bg-dark-blue mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
+            <main className="pa4 white-80">
                 <div className="measure">
                     <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
                         <legend className="f2 fw6 ph0 mh0">Register</legend>
@@ -78,7 +78,7 @@ const Register = ({ loadUser, onRouteChange }) => {
                     <div className="">
                         <input 
                           onClick={onSubmitRegister}
-                          className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
+                          className="b ph3 pv2 input-reset ba b--white white bg-transparent grow pointer f6 dib" 
                           type="submit" 
                           value="Register" 
                         />
