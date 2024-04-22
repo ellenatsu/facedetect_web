@@ -7,8 +7,8 @@ import brain from '@/public/brain.png';
 
 const Logo = () => {
   return (
-    <div className='ma4 mt0'>
-      <Tilt className='Tilt br1 shadow-1' style={{ height: 150, width:150}} options={{ max:60}}>
+    <div className='ma4 mt0 ml8'>
+      <Tilt className='Tilt br1 shadow-1 bg-light-blue' style={{ height: 150, width:150}} options={{ max:60}}>
         <div className='Tilt-inner pa3 light-blue'>
             <Image src={brain} width={120} height={120} alt="logo" />
         </div> 

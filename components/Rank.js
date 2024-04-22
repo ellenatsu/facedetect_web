@@ -3,11 +3,10 @@ import React from 'react'
 const Rank = ({name,entries}) => {
   return (
     <div>
-        <div className='white f3'>
-            {'Your current rank is...'}
+        <div className='white f2'>
+            {`Hi ${name}! Your already detected ${entries} faces.`}
         </div>
-        <div className='white f1'>
-            {'#3'}
+        <div className='white f3'>
         </div>
     </div>
   )

@@ -30,31 +30,36 @@ export default function Home() {
     });
   }
 
+  const setEntries = (count) => {
+    setUser({ ...user, entries: count });
+  }
+
   const onRouteChange = (route) => {
     if (route === 'signout') {
       setIsSignedIn(false);
+      setRoute('signin');
     } else if (route === 'home') {
       setIsSignedIn(true);
+      setRoute(route);
+    } else {
+      setRoute(route);
     }
-    setRoute(route);
   }
 
   return (
     <>
       <div className="App">
         <Navigation isSignedIn={isSignedIn} onRouteChange={onRouteChange} />
-        {route === 'home'
-          ? <div>
+        {route === 'home' ? (
+          <div>
             <Logo />
             <Rank name={user.name} entries={user.entries} />
-            <FaceRecognition />
+            <FaceRecognition userId={user.id} setEntries={setEntries} />
           </div>
-          : (
-            route === 'signin'
-              ? <SignIn loadUser={loadUser} onRouteChange={onRouteChange} />
-              : <Register loadUser={loadUser} onRouteChange={onRouteChange} />
-          )
-        }
+        )
+          : route === 'signin' ? (<SignIn loadUser={loadUser} onRouteChange={onRouteChange} />)
+            : (<Register loadUser={loadUser} onRouteChange={onRouteChange} />)}
+
       </div>
       <ParticlesBg />
     </>
