@@ -29,7 +29,7 @@ const FaceRecognition = ({userId, setEntries}) => {
 
     const onSubmit = () => {
         setUrl(value);
-        fetch(`${process.env.BACKEND_API}/imageurl`, {
+        fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/imageurl`, {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({imageUrl: value })
@@ -37,7 +37,7 @@ const FaceRecognition = ({userId, setEntries}) => {
           .then(response => response.json())
           .then(response => {
             if (response) {
-              fetch(`${process.env.BACKEND_API}/image`, {
+              fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/image`, {
                 method: 'put',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

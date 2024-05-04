@@ -14,7 +14,7 @@ const SignIn = ({ loadUser, onRouteChange }) => {
       }
     
       const onSubmitSignIn = () => {
-        fetch(`${process.env.BACKEND_API}/signin`, {
+        fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/signin`, {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

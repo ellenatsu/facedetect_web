@@ -20,7 +20,8 @@ const Register = ({ loadUser, onRouteChange }) => {
       }
     
       const onSubmitRegister = () => {
-        fetch(`${process.env.BACKEND_API}/register`, {
+        
+        fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/register`, {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
