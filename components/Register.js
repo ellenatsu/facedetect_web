@@ -20,7 +20,7 @@ const Register = ({ loadUser, onRouteChange }) => {
       }
     
       const onSubmitRegister = () => {
-        fetch('https://aiapp-api-ffd161fcfa13.herokuapp.com/register', {
+        fetch(`${process.env.BACKEND_API}/register`, {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

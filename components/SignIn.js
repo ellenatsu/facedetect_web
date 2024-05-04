@@ -14,7 +14,7 @@ const SignIn = ({ loadUser, onRouteChange }) => {
       }
     
       const onSubmitSignIn = () => {
-        fetch('https://aiapp-api-ffd161fcfa13.herokuapp.com/signin', {
+        fetch(`${process.env.BACKEND_API}/signin`, {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
