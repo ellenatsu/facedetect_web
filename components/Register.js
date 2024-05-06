@@ -48,7 +48,7 @@ const Register = ({ loadUser, onRouteChange }) => {
                         <div className="mt3">
                             <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
                             <input 
-                              className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+                              className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 white" 
                               type="text" 
                               name="name" 
                               id="name"
@@ -58,7 +58,7 @@ const Register = ({ loadUser, onRouteChange }) => {
                         <div className="mt3">
                             <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
                             <input 
-                              className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+                              className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 white" 
                               type="email" 
                               name="email-address" 
                               id="email-address"

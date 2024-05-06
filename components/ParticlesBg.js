@@ -33,11 +33,6 @@ export default function ParticlesBg() {
 
   const options = useMemo(
     () => ({
-      background: {
-        color: {
-          value: "00008E",
-        },
-      },
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -62,10 +57,15 @@ export default function ParticlesBg() {
       },
       particles: {
         color: {
-          value: "#ffffff",
+          value: "#ADD8E6",
+          animation: {
+            enable: true,
+            speed: 50,
+            sync: false, // set to true if you want all particles to change colors in sync
+          }
         },
         links: {
-          color: "#ffffff",
+          color: "#ADD8E6",
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -104,16 +104,18 @@ export default function ParticlesBg() {
 
   if (init) {
     return (
+      <div className="gradientBackground">
       <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
       />
+      </div>
     );
   }
 
   return <></>;
 
 
-  
+
 }

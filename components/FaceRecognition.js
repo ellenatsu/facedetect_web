@@ -7,8 +7,6 @@ const FaceRecognition = ({userId, setEntries}) => {
     const [value, setValue] = useState('');
     const [url, setUrl] = useState('');
     const [box, setBox] = useState([{}]);
-
-
     //calculate face location
     const calculateBox = (data) => {
         const image = document.getElementById('inputimage');
@@ -29,6 +27,7 @@ const FaceRecognition = ({userId, setEntries}) => {
 
     const onSubmit = () => {
         setUrl(value);
+        console.log(value)
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/imageurl`, {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
@@ -51,6 +50,7 @@ const FaceRecognition = ({userId, setEntries}) => {
               .catch(console.log);
                //console.log(response)
               setBox(calculateBox(response))
+              console.log(box)
             }
           })
           .catch(err => console.log(err));

@@ -48,11 +48,16 @@ button {
 
 .facedetect-box {
   position: absolute;
-  box-shadow: 0 0 0 3px #149df2 inset;
+  box-shadow: 0 0 0 3px #f1532f inset;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   cursor: pointer;
+}
+
+.gradientBackground {
+  height: 100vh; /* Full height of the viewport */
+  background: linear-gradient(to bottom, #ADD8E6, #00008B); /* Light blue to dark blue */
 }
 
 

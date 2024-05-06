@@ -32,7 +32,7 @@ const SignIn = ({ loadUser, onRouteChange }) => {
       }
     
     return (
-        <article className="br3 ba b--black-10 bg-dark-blue mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
+        <article className="br3 ba b--black-10 bg-dark-yellow mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
             <main className="pa4 white-80">
                 <div className="measure">
                     <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
@@ -40,7 +40,7 @@ const SignIn = ({ loadUser, onRouteChange }) => {
                         <div className="mt3">
                             <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
                             <input 
-                              className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+                              className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 white" 
                               type="email" 
                               name="email-address" 
                               id="email-address"
@@ -50,7 +50,7 @@ const SignIn = ({ loadUser, onRouteChange }) => {
                         <div className="mv3">
                             <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
                             <input 
-                              className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+                              className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 white" 
                               type="password" 
                               name="password" 
                               id="password"
