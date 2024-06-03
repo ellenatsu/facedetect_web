@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <>
       <div className="App">
-        <Navigation isSignedIn={isSignedIn} onRouteChange={onRouteChange} />
+        <Navigation isSignedIn={isSignedIn} onRouteChange={onRouteChange} user={user} loadUser={loadUser} />
         {route === 'home' ? (
           <div>
             <Logo />
